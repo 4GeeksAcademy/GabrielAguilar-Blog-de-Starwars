@@ -30,7 +30,6 @@ export const Card = props => {
                         <Link className="btn btn-outline-primary"  to={props.route}>Learn more!
                         </Link>
                         {/* OPCIÓN del boton con useNavigate */}
-                        {/* <button className="btn btn-outline-primary" onClick={e => navigate(props.route)}>Learn more!</button> */}
                         <span className="btn btn-outline-warning" onClick={toggleFavorite} >
                         <i id="hover-black-heart" className={isFavorite ? "fas fa-heart" : "fas fa-heart"} style={{ color: isFavorite ? "black" : "#fdf51c" }}></i>
                         </span>

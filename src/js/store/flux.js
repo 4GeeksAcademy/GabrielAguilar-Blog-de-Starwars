@@ -19,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((response) => response.json())
 					.then(data => {
 						setStore({ ...getStore , characters: data.results});
-						console.log(data.results);
+						
 					})// => guardo el json en un espacio de memoria
 					.catch((error) => console.log(error))// => te aviso si algo sale mal
 			},
@@ -32,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((response) => response.json())
 					.then(data => {
 						setStore({ ...getStore , character: data.result});
-						console.log(data.results);
+					
 					})// => guardo el json en un espacio de memoria
 					.catch((error) => console.log(error))// => te aviso si algo sale mal
 			},
@@ -46,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((response) => response.json())
 					.then(data => {
 						setStore({ ...getStore , planets: data.results });
-						console.log(data);
+						
 					})// => guardo el json en un espacio de memoria
 					.catch((error) => console.log(error))// => te aviso si algo sale mal
 			},
@@ -58,7 +58,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((response) => response.json())
 					.then(data => {
 						setStore({ ...getStore , planet: data.result});
-						console.log(data.results);
+						
 					})// => guardo el json en un espacio de memoria
 					.catch((error) => console.log(error))// => te aviso si algo sale mal
 			},
@@ -72,12 +72,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((response) => response.json())
 					.then(data => {
 						setStore({ ...getStore , vehicles: data.results });
-						console.log(data);
+						
 					})// => guardo el json en un espacio de memoria
 					.catch((error) => console.log(error))// => te aviso si algo sale mal
 			},
 
-			// 3. Obteniendo un coche de la API
+			// 3. Obteniendo un choche de la API
 			getVehicle: (id) => {
 				fetch("https://www.swapi.tech/api/vehicles/" + id , {
 					method: "GET",
@@ -85,7 +85,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then((response) => response.json())
 					.then(data => {
 						setStore({ ...getStore , vehicle: data.result });
-						console.log(data);
+						
 					})// => guardo el json en un espacio de memoria
 					.catch((error) => console.log(error))// => te aviso si algo sale mal
 			},
@@ -100,8 +100,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			deleteFavorite: (name) => {
 				const store = getStore()
 				const newFavorite = store.favorites.filter((item) => item !== name);
-				console.log(newFavorite);
-				console.log(name);
+				
 
 				setStore({favorites: newFavorite});
 		
